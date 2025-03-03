@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "c9902bbb-c158-4f22-99e4-c0ebe5aae412",
+		"name": "Blog Api Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36857049"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"user1\",\r\n    \"email\": \"user1@example.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@example.com\",\r\n    \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Posts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVmNmUzOGU0YzdkYjViNjU4MjkwMiIsImlhdCI6MTc0MTAyNzA3MSwiZXhwIjoxNzQxMDMwNjcxfQ.p6i6S-By_y5gFNOVQHcybFDgenhSQN81Asw0jnogcnc",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"this is title 1\",\r\n    \"content\": \"this is content 1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVlZjU3OGU0YzdkYjViNjU4MjhmYyIsImlhdCI6MTc0MTAyNTEzOSwiZXhwIjoxNzQxMDI4NzM5fQ.qcl4VQ8rie9JbMMUg7qfT-yUGTuMxaOcTMAI_N_AOgE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVmNmUzOGU0YzdkYjViNjU4MjkwMiIsImlhdCI6MTc0MTAyNzA3MSwiZXhwIjoxNzQxMDMwNjcxfQ.p6i6S-By_y5gFNOVQHcybFDgenhSQN81Asw0jnogcnc",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Post with post ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVmNmUzOGU0YzdkYjViNjU4MjkwMiIsImlhdCI6MTc0MTAyNzA3MSwiZXhwIjoxNzQxMDMwNjcxfQ.p6i6S-By_y5gFNOVQHcybFDgenhSQN81Asw0jnogcnc",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/posts/67c5f72a8e4c7db5b6582905",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"67c5f72a8e4c7db5b6582905"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post with Post ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVmNmUzOGU0YzdkYjViNjU4MjkwMiIsImlhdCI6MTc0MTAyNzA3MSwiZXhwIjoxNzQxMDMwNjcxfQ.p6i6S-By_y5gFNOVQHcybFDgenhSQN81Asw0jnogcnc",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"this is Updated Title\",\r\n    \"content\": \"this is Updated content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/posts/67c5f72a8e4c7db5b6582905",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"67c5f72a8e4c7db5b6582905"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post with Post ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzVmNmUzOGU0YzdkYjViNjU4MjkwMiIsImlhdCI6MTc0MTAyNzA3MSwiZXhwIjoxNzQxMDMwNjcxfQ.p6i6S-By_y5gFNOVQHcybFDgenhSQN81Asw0jnogcnc",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/posts/67c5f72a8e4c7db5b6582905",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"67c5f72a8e4c7db5b6582905"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
